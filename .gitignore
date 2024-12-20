@@ -1,0 +1,25 @@
+
+# Ignore environment files
+.env
+
+# Ignore log files
+logs/
+
+# Ignore crash reports
+crashes/
+
+# Ignore session files
+**/sessions.json
+
+# Ignore backup files
+**/*.backup
+**/*backup*
+
+# Ignore specific config files
+accounts/*/config.yml
+accounts/*/filters.yml
+accounts/*/nocodb.yml
+
+# Ignore other sensitive or unnecessary files
+51-android.rules
+
