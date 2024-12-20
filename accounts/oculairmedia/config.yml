@@ -1,0 +1,82 @@
+##############################################################################
+# General Configuration
+##############################################################################
+
+username: "oculairmedia"
+device: "192.168.50.202:5555"
+app-id: com.instagram.android
+screen-sleep: true
+speed-multiplier: 0.4
+debug: false
+total-crashes-limit: 5
+count-app-crashes: false
+shuffle-jobs: true
+truncate-sources: 2-3
+allow-untested-ig-version: true
+
+##############################################################################
+# Actions
+##############################################################################
+
+# Hashtag interactions
+hashtag-posts-recent: [ "motiongraphics", "c4d", "3dart", "motiondesign", "animation", "cgi", "3danimation", "mograph", "octane", "redshift", "sidefx", "houdini", "proceduralart" ]
+
+# Top creators in the space
+blogger-followers: [ "beeple_crap", "mvsm_", "peter_tarka", "gmunk", "wannerstedt", "danny_jones_art", "kitasavi", "sirjoancornella", "loisvb", "takashipom", "guweiz", "pascalcampionart", "felipepantone", "93.minho", "ramonn90", "abstractsunday" ]
+
+# Engagement settings
+watch-video-time: 20-45
+watch-photo-time: 5-15
+delete-interacted-users: true
+comment-percentage: 15-25
+pm-percentage: 5-10
+
+##############################################################################
+# Source Limits
+##############################################################################
+
+interactions-count: 15-25
+likes-count: 1-2
+likes-percentage: 70-80
+stories-count: 1-2
+stories-percentage: 30-40
+carousel-count: 1-2
+carousel-percentage: 40-50
+interact-percentage: 35-45
+follow-percentage: 25-35
+follow-limit: 30
+skipped-list-limit: 8-12
+skipped-posts-limit: 4
+min-following: 100
+max-comments-pro-user: 1
+
+##############################################################################
+# Total Limits Per Session
+##############################################################################
+
+total-likes-limit: 80-120
+total-follows-limit: 20-30
+total-watches-limit: 60-100
+total-comments-limit: 8-12
+total-pm-limit: 5-8
+total-successful-interactions-limit: 60-100
+total-interactions-limit: 120-180
+
+##############################################################################
+# Ending Session Conditions
+##############################################################################
+
+end-if-likes-limit-reached: true
+end-if-follows-limit-reached: true
+end-if-watches-limit-reached: true
+end-if-comments-limit-reached: true
+end-if-pm-limit-reached: true
+
+##############################################################################
+# Scheduling
+##############################################################################
+
+working-hours: [ "00.00-23.59" ]
+time-delta: 25-45
+repeat: 280-320
+total-sessions: -1

@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  virtualinfluencer:
+    image: oculair/virtualinfluencer:latest
+    container_name: virtualinfluencer
+    restart: unless-stopped
+    privileged: true
+    ports:
+      - "8000:8000"  # FastAPI
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+      - ./accounts:/app/accounts
+      - adb-keys:/root/.android
+      - /dev/bus/usb:/dev/bus/usb
+      - $HOME/.android:/root/.android
+    environment:
+      - TZ=UTC
+      - PYTHONUNBUFFERED=1
+      - ADB_DEVICE_IP=192.168.50.202
+      - ADB_DEVICE_PORT=5555
+    extra_hosts:
+      - "host.docker.internal:host-gateway"  # Allow access to host network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  adb-keys:
